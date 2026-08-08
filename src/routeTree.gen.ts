@@ -10,33 +10,141 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as JoinRouteImport } from './routes/join'
+import { Route as PartnerRouteImport } from './routes/partner'
+import { Route as RequestSupportRouteImport } from './routes/request-support'
+import { Route as WhatWeDoRouteImport } from './routes/what-we-do'
+import { Route as WhyLink4goodRouteImport } from './routes/why-link4good'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpactRoute = ImpactRouteImport.update({
+  id: '/impact',
+  path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JoinRoute = JoinRouteImport.update({
+  id: '/join',
+  path: '/join',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PartnerRoute = PartnerRouteImport.update({
+  id: '/partner',
+  path: '/partner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RequestSupportRoute = RequestSupportRouteImport.update({
+  id: '/request-support',
+  path: '/request-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatWeDoRoute = WhatWeDoRouteImport.update({
+  id: '/what-we-do',
+  path: '/what-we-do',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyLink4goodRoute = WhyLink4goodRouteImport.update({
+  id: '/why-link4good',
+  path: '/why-link4good',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/impact': typeof ImpactRoute
+  '/join': typeof JoinRoute
+  '/partner': typeof PartnerRoute
+  '/request-support': typeof RequestSupportRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/why-link4good': typeof WhyLink4goodRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/impact': typeof ImpactRoute
+  '/join': typeof JoinRoute
+  '/partner': typeof PartnerRoute
+  '/request-support': typeof RequestSupportRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/why-link4good': typeof WhyLink4goodRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/impact': typeof ImpactRoute
+  '/join': typeof JoinRoute
+  '/partner': typeof PartnerRoute
+  '/request-support': typeof RequestSupportRoute
+  '/what-we-do': typeof WhatWeDoRoute
+  '/why-link4good': typeof WhyLink4goodRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/how-it-works'
+    | '/impact'
+    | '/join'
+    | '/partner'
+    | '/request-support'
+    | '/what-we-do'
+    | '/why-link4good'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/how-it-works'
+    | '/impact'
+    | '/join'
+    | '/partner'
+    | '/request-support'
+    | '/what-we-do'
+    | '/why-link4good'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/how-it-works'
+    | '/impact'
+    | '/join'
+    | '/partner'
+    | '/request-support'
+    | '/what-we-do'
+    | '/why-link4good'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  ImpactRoute: typeof ImpactRoute
+  JoinRoute: typeof JoinRoute
+  PartnerRoute: typeof PartnerRoute
+  RequestSupportRoute: typeof RequestSupportRoute
+  WhatWeDoRoute: typeof WhatWeDoRoute
+  WhyLink4goodRoute: typeof WhyLink4goodRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +156,86 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impact': {
+      id: '/impact'
+      path: '/impact'
+      fullPath: '/impact'
+      preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/join': {
+      id: '/join'
+      path: '/join'
+      fullPath: '/join'
+      preLoaderRoute: typeof JoinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/partner': {
+      id: '/partner'
+      path: '/partner'
+      fullPath: '/partner'
+      preLoaderRoute: typeof PartnerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/request-support': {
+      id: '/request-support'
+      path: '/request-support'
+      fullPath: '/request-support'
+      preLoaderRoute: typeof RequestSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/what-we-do': {
+      id: '/what-we-do'
+      path: '/what-we-do'
+      fullPath: '/what-we-do'
+      preLoaderRoute: typeof WhatWeDoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-link4good': {
+      id: '/why-link4good'
+      path: '/why-link4good'
+      fullPath: '/why-link4good'
+      preLoaderRoute: typeof WhyLink4goodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  ImpactRoute: ImpactRoute,
+  JoinRoute: JoinRoute,
+  PartnerRoute: PartnerRoute,
+  RequestSupportRoute: RequestSupportRoute,
+  WhatWeDoRoute: WhatWeDoRoute,
+  WhyLink4goodRoute: WhyLink4goodRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
