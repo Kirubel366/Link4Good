@@ -83,11 +83,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 				{
 					name: "description",
 					content:
-						"Link4Good is a student-led digital impact initiative helping Ethiopian nonprofits build modern digital platforms.",
+						"Link4Good is a student-led digital impact initiative providing Ethiopian nonprofits with modern digital platforms at no cost.",
 				},
 				{ name: "author", content: "Link4Good" },
 				{ property: "og:type", content: "website" },
 				{ name: "twitter:card", content: "summary_large_image" },
+				{
+					name: "google-site-verification",
+					content: "dFEM33uFdDDz6V4O__jl-owsnb1EwEAP1g19mTpdQpk",
+				},
 			],
 			links: [
 				{ rel: "stylesheet", href: appCss },

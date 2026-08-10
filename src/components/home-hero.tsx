@@ -103,9 +103,9 @@ export function HomeHero() {
 						className="hero-in mt-7 max-w-xl text-lg leading-relaxed text-primary-foreground/75"
 						style={{ animationDelay: "320ms" }}
 					>
-						We help Ethiopian nonprofit organizations build modern digital
-						platforms that connect their missions with the people who want to
-						support them.
+						We equip Ethiopian nonprofit organizations with modern digital
+						platforms that help them amplify their missions, showcase their
+						impact, and connect with the people who want to support their work.
 					</p>
 					<div
 						className="hero-in mt-10 flex flex-wrap gap-3"
