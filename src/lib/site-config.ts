@@ -1,12 +1,18 @@
 // Placeholder contact details — replace with Link4Good's real address and number.
 export const CONTACT = {
-	email: "hello@link4good.org",
-	phone: "+251 000 000 000",
-	phoneHref: "+251000000000",
+	email: "link4good.ethiopia@gmail.com",
+	phone: "+251 980 767 663",
+	phoneHref: "+251980767663",
 };
 
 export type NavSection = { hash: string; label: string };
 export type NavItem = { to: string; label: string; sections: NavSection[] };
+
+export const JOIN_SECTIONS: NavSection[] = [
+	{ hash: "roles", label: "Open Roles" },
+	{ hash: "what-you-get", label: "What You Get" },
+	{ hash: "apply", label: "Apply Now" },
+];
 
 export const NAV: NavItem[] = [
 	{
@@ -22,13 +28,13 @@ export const NAV: NavItem[] = [
 		],
 	},
 	{
-		to: "/why-link4good",
-		label: "Why Link4Good",
+		to: "/about",
+		label: "About",
 		sections: [
-			{ hash: "digital-gap", label: "The Digital Gap" },
-			{ hash: "what-gets-lost", label: "What Gets Lost" },
-			{ hash: "why-it-matters", label: "Why It Matters" },
-			{ hash: "why-we-exist", label: "Why We Exist" },
+			{ hash: "story", label: "Our Story" },
+			{ hash: "mission", label: "Mission & Vision" },
+			{ hash: "values", label: "Our Values" },
+			{ hash: "team", label: "The Team" },
 		],
 	},
 	{
@@ -37,6 +43,14 @@ export const NAV: NavItem[] = [
 		sections: [
 			{ hash: "capabilities", label: "Capabilities" },
 			{ hash: "beyond-launch", label: "Beyond Launch" },
+		],
+	},
+	{
+		to: "/how-it-works",
+		label: "How It Works",
+		sections: [
+			{ hash: "process", label: "The Process" },
+			{ hash: "your-part", label: "Your Part" },
 		],
 	},
 	{
@@ -51,21 +65,13 @@ export const NAV: NavItem[] = [
 		],
 	},
 	{
-		to: "/how-it-works",
-		label: "How It Works",
+		to: "/why-link4good",
+		label: "Why Link4Good",
 		sections: [
-			{ hash: "process", label: "The Process" },
-			{ hash: "your-part", label: "Your Part" },
-		],
-	},
-	{
-		to: "/about",
-		label: "About",
-		sections: [
-			{ hash: "story", label: "Our Story" },
-			{ hash: "mission", label: "Mission & Vision" },
-			{ hash: "values", label: "Our Values" },
-			{ hash: "team", label: "The Team" },
+			{ hash: "digital-gap", label: "The Digital Gap" },
+			{ hash: "what-gets-lost", label: "What Gets Lost" },
+			{ hash: "why-it-matters", label: "Why It Matters" },
+			{ hash: "why-we-exist", label: "Why We Exist" },
 		],
 	},
 	{

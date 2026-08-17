@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
 			{
 				name: "description",
 				content:
-					"Link4Good is a student-led initiative helping Ethiopian nonprofit organizations build modern digital platforms that connect their missions with supporters.",
+					"Link4Good is a student-led digital impact initiative providing Ethiopian nonprofits with modern digital platforms at no cost.",
 			},
 			{ property: "og:title", content: "Link4Good — Powering the Helpers" },
 			{

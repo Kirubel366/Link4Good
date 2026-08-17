@@ -130,7 +130,7 @@ export function SectionHeading({
 }: {
 	eyebrow?: string;
 	title: string;
-	intro?: string;
+	intro?: React.ReactNode;
 	tone?: "dark" | "light";
 	align?: "left" | "center";
 }) {
@@ -143,6 +143,7 @@ export function SectionHeading({
 					{eyebrow}
 				</Eyebrow>
 			) : null}
+
 			<h2
 				className={`mt-4 text-3xl font-semibold leading-[1.12] md:text-[2.6rem] ${
 					tone === "light" ? "text-primary-foreground" : "text-primary"
@@ -150,8 +151,9 @@ export function SectionHeading({
 			>
 				{title}
 			</h2>
+
 			{intro ? (
-				<p
+				<div
 					className={`mt-5 text-base leading-relaxed md:text-lg ${
 						tone === "light"
 							? "text-primary-foreground/75"
@@ -159,7 +161,7 @@ export function SectionHeading({
 					}`}
 				>
 					{intro}
-				</p>
+				</div>
 			) : null}
 		</div>
 	);

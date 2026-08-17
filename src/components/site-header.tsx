@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { CONTACT, NAV } from "@/lib/site-config";
+import { CONTACT, JOIN_SECTIONS, NAV } from "@/lib/site-config";
 import logoUrl from "../assets/link4goodLogo.png";
 
 export function SiteHeader() {
@@ -59,9 +59,46 @@ export function SiteHeader() {
 							</a>
 						</div>
 						<div className="flex items-center gap-4">
-							<Link to="/join" className="transition-colors hover:text-primary">
-								Join the Team
-							</Link>
+							<div
+								className="relative"
+								onMouseEnter={() => hoverOpen("join")}
+								onMouseLeave={hoverClose}
+								onFocus={() => hoverOpen("join")}
+								onBlur={hoverClose}
+							>
+								<Link
+									to="/join"
+									className="transition-colors hover:text-primary"
+								>
+									Join the Team
+								</Link>
+								<div
+									className={`absolute left-0 top-full z-50 pt-2 transition-all duration-150 ${
+										openMenu === "join"
+											? "pointer-events-auto translate-y-0 opacity-100"
+											: "pointer-events-none -translate-y-1 opacity-0"
+									}`}
+								>
+									<div className="min-w-52 rounded-lg border border-border bg-card p-2 shadow-[0_24px_50px_-30px_rgba(30,58,138,0.55)]">
+										<Link
+											to="/join"
+											className="block rounded-md px-3 py-2 text-[0.8rem] font-semibold text-primary hover:bg-muted"
+										>
+											Overview
+										</Link>
+										{JOIN_SECTIONS.map((section) => (
+											<Link
+												key={section.hash}
+												to="/join"
+												hash={section.hash}
+												className="block rounded-md px-3 py-2 text-[0.8rem] text-muted-foreground transition-colors hover:bg-muted hover:text-primary"
+											>
+												{section.label}
+											</Link>
+										))}
+									</div>
+								</div>
+							</div>
 							<Link
 								to="/partner"
 								className="rounded-sm bg-[#F5C96A] px-3 py-1.5 font-semibold text-[#1E2A5A] transition-all hover:bg-[#E9B95A]"
@@ -182,18 +219,6 @@ export function SiteHeader() {
 							>
 								{item.label}
 							</Link>
-							<div className="mb-1 ml-3 flex flex-wrap gap-x-4 gap-y-1 border-l border-border pl-3">
-								{item.sections.map((s) => (
-									<Link
-										key={s.hash}
-										to={item.to}
-										hash={s.hash}
-										className="py-1 text-xs text-muted-foreground hover:text-primary"
-									>
-										{s.label}
-									</Link>
-								))}
-							</div>
 						</div>
 					))}
 
@@ -203,6 +228,12 @@ export function SiteHeader() {
 							className="rounded-md border border-border px-4 py-3 text-center text-sm font-semibold text-primary"
 						>
 							Join the Team
+						</Link>
+						<Link
+							to="/partner"
+							className="inline-flex items-center justify-center rounded-sm bg-[#F5C96A] px-3 py-1.5 font-semibold text-[#1E2A5A] transition-all hover:bg-[#E9B95A]"
+						>
+							Partner With Us
 						</Link>
 					</div>
 					<div className="mt-3 flex flex-col gap-1 border-t border-border pt-3 text-xs text-muted-foreground">

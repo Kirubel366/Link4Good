@@ -130,18 +130,6 @@ export function HomeHero() {
 							className="h-full w-full object-cover"
 						/>
 					</div>
-					<div className="absolute -bottom-6 -left-4 hidden animate-[hero-float_7s_ease-in-out_infinite_reverse] rounded-lg border border-border bg-card p-5 shadow-[0_25px_50px_-30px_rgba(0,0,0,0.6)] sm:block">
-						<p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-brand">
-							<span className="relative flex h-2 w-2">
-								<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-brand/60" />
-								<span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-brand" />
-							</span>
-							Mission visible
-						</p>
-						<p className="mt-2 max-w-[13rem] text-sm text-foreground">
-							Programs, impact and ways to help — all in one place.
-						</p>
-					</div>
 				</div>
 			</div>
 		</section>

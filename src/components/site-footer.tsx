@@ -3,11 +3,13 @@ import { CONTACT } from "@/lib/site-config";
 import logoUrl from "../assets/link4goodLogo.png";
 
 const explore = [
-	{ to: "/why-link4good", label: "Why Link4Good" },
-	{ to: "/what-we-do", label: "What We Do" },
-	{ to: "/impact", label: "Impact" },
-	{ to: "/how-it-works", label: "How It Works" },
+	{ to: "/", label: "Home" },
 	{ to: "/about", label: "About" },
+	{ to: "/what-we-do", label: "What We Do" },
+	{ to: "/how-it-works", label: "How It Works" },
+	{ to: "/impact", label: "Impact" },
+	{ to: "/why-link4good", label: "Why Link4Good" },
+	{ to: "/request-support", label: "Request Support" },
 ];
 
 const involved = [
@@ -37,9 +39,8 @@ export function SiteFooter() {
 							Powering the Helpers.
 						</p>
 						<p className="mt-3 text-sm leading-relaxed text-primary-foreground/70">
-							A student-led digital impact initiative helping Ethiopian
-							nonprofit organizations build modern digital platforms that
-							connect their missions with the people who want to support them.
+							A student-led digital impact initiative providing Ethiopian
+							nonprofits with modern digital platforms at no cost.
 						</p>
 					</div>
 
